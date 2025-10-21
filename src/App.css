@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Background gradient and global font */
+body {
+  @apply bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-100 font-sans min-h-screen;
+}
+
+/* Navbar styling */
+.navbar {
+  @apply bg-indigo-700 text-white shadow-md py-4 px-6 flex justify-between items-center;
+}
+.nav-link {
+  @apply text-white hover:text-gray-200 transition duration-300 font-semibold;
+}
+.nav-button {
+  @apply bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition duration-300;
+}
+
+/* Card styling */
+.card {
+  @apply bg-white shadow-lg rounded-3xl p-6 transition transform hover:scale-105 hover:shadow-2xl duration-300;
+}
+
+/* Form styling */
+.form-input {
+  @apply w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 mb-4;
+}
+.form-button {
+  @apply w-full bg-indigo-600 text-white font-semibold py-3 rounded-xl hover:bg-indigo-700 hover:shadow-lg transition duration-300;
+}
+
+/* Property card */
+.property-card {
+  @apply bg-white shadow-lg rounded-3xl p-6 flex flex-col gap-3 hover:shadow-2xl transition duration-300;
+}
+.property-image {
+  @apply w-full h-48 object-cover rounded-xl cursor-pointer;
+}
+.property-title {
+  @apply text-xl font-bold text-indigo-700;
+}
+.property-info {
+  @apply text-gray-600;
+}
+.property-buttons button {
+  @apply px-4 py-2 rounded font-semibold transition duration-300;
+}
+.edit-button {
+  @apply bg-yellow-500 text-white hover:bg-yellow-600;
+}
+.delete-button {
+  @apply bg-red-500 text-white hover:bg-red-600;
+}
+
+/* Modal styling */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+.modal-content {
+  @apply bg-white rounded-3xl p-6 shadow-xl max-w-lg w-full relative;
+}
+.modal-close {
+  @apply absolute top-3 right-3 text-gray-600 cursor-pointer hover:text-gray-900 font-bold;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .property-grid {
+    @apply grid grid-cols-2 gap-6;
+  }
+}
+@media (min-width: 1024px) {
+  .property-grid {
+    @apply grid-cols-3;
+  }
+}
